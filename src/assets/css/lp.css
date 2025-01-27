@@ -22,6 +22,7 @@ body{
   padding: 20px;
   background-color: #ffffff;
   border-radius: 60px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
  
   
 }
@@ -42,21 +43,22 @@ body{
   cursor: pointer;
 }
 
+
 @media (max-width: 767.98px) {
   .navbar-collapse {
     position: relative;
   }
 
-  .navbar-collapse.collapse.show {
+  /* .navbar-collapse.collapse.show {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 40%;
     background-color: white;
     width: auto;
     text-align: left;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+  } */
 
   .navbar-nav {
     flex-direction: column;
@@ -77,13 +79,14 @@ body{
 #hero{
   background-image: url('./../img/heroImg.png');
   background-repeat: no-repeat;
-  background-position-y:-2.5em;
+  background-position-y:-3.5em;
   background-size: contain;
   background-position-x:right;
   height: 100%;
  
 
 }
+
 
 .hero-text {
   max-width: 50%;
@@ -208,4 +211,16 @@ body{
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
+}
+#hero-bg{
+  background-color: #055C9D;
+  overflow: hidden;
+};
+.stat{
+  top:150; left:60%
+}
+@media screen and (max-width: 767.98px) and (orientation: landscape) {
+  .navbar .nav-links {
+    display: none;
+  }
 }

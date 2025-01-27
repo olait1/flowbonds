@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './../../assets/css/seller.css';
-
+import Logo from './../../assets/img/Logo-beside_1.png';
 const Sidebar = () => {
   const location = useLocation();
 
   return (
     <div className="sidebar bg-light vh-100 d-flex flex-column justify-content-between">
       <div>
-        <h2 className="text-center mb-5 py-3">Flowbonds</h2>
+        <h2 className="text-center mb-5 py-3">  
+    <img src={Logo} alt="" srcset="" width={150} />
+    </h2>
         <small className="bold text-muted px-3">Main Menu</small>
         <ul className="list-unstyled ps-0 mt-3">
           <li className={`mb-3 ps-3 ${location.pathname === '/seller/dashboard' ? 'active' : ''}`}>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Sidebar from '../components/general/sidebar';
 import Header from '../components/general/header';
 
@@ -7,6 +7,7 @@ import { Outlet } from 'react-router-dom';
 import { use } from 'react';
 const Seller = () => {
 
+  
   return (
  
     <div class="container-fluid">

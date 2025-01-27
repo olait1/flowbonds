@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import pp from './../../assets/img/my_p.jpg';
 import SearchBar from './search_bar';
 import { useUserContext } from '../../contextProvider/userContext';
+import Logo from './../../assets/img/Logo-fb.png';
+import Toggler from './toggler';
 const Header = () => {
   const [checkPage, setCheckPage] = useState(false);
     const {user, setUser}=useUserContext();
@@ -27,8 +29,9 @@ const Header = () => {
         position: 'fixed', // Keeps the header at the top
         top: 0,
         zIndex: 1000, // Ensures header is above other content
-      }}
-    >
+      }}>
+          <Toggler/> 
+      <img src={Logo} alt="" srcset="" width={80} />
       <h3 className="mb-0">Welcome Back,{user.name}</h3>
    <SearchBar placeholder='Search anything...'/>
       <span className="text-muted mx-3">|</span>

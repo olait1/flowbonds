@@ -4,7 +4,7 @@ import Navbar from "./Navbar"
 import { Link } from "react-router-dom";
 const Hero = () => {
   return (
-    <div className="" id="hero-bg" style={{ backgroundColor: '#055C9D'}}>
+    <div className="" id="hero-bg" >
   {/* <div class="wave-clip">
   <h1>In and Out Curve</h1>
 </div> */}
@@ -25,11 +25,10 @@ const Hero = () => {
 
            
           <h1 className="display-5 fw-bold mt-lg-5 " style={{ textAlign : "justify" }}>
-            Seamlessly Connecting Sellers, Buyers and Drivers...
-          </h1>
+          Seamlessly Connecting Seller and Buyers of all Kind...   </h1>
           <p className="lead text-justify  mt-lg-5 text-dark" style={{ textAlign : "justify", fontWeight:'bolder'}}>
-            Join Flowbonds today to experience a platform designed for effortless
-            transactions and logistics.
+          Join Flowbonds today to experience Seamless Solutions, Infinite Possibilities in an ever-evolving digital world...
+       
           </p>
           <div className="mt-3 py-md-5 py-lg-5">
             <Link to='/auth/seller/' className="btn btn-primary me-3">Log In</Link>

@@ -7,26 +7,27 @@ import illustrationImg from "./../../assets/img/illustrationimg.png"
 import logoImg from "./../../assets/img/logoimg.png"
 import social_graphicImg from "./../../assets/img/social_graphic1.png"
 import video_EditingImg from "./../../assets/img/video_Editing.png"
+import ecommerce from "./../../assets/img/e1.jpeg"
 const products =[
     {
-name:'Graphic Design',
-img: graphicImg
+name:'Shopping Store',
+img: ecommerce
     },
     {
       name:'Cartoon Animation',
       img: cartoonImg
           },
     {
-      name:'Illustrations',
-      img: illustrationImg
+      name:'Graphic Design',
+      img: graphicImg
     },
     {
       name:'Flyers',
       img: flyersImg
           },
           {
-            name:'Logo Design',
-            img: logoImg
+            name:'Illustration',
+            img: illustrationImg
                 },
           {
             name:'Social Graphics',
