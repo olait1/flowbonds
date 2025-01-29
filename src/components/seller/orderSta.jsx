@@ -58,7 +58,7 @@ const OrderSta = () => {
   }, []); // Runs only on mount and unmount
 
   return (
-    <div className="col-3  card bg-light shadow p-3" style={{ marginRight:50+'px' }}>
+    <div className="col-md-3  card bg-light shadow p-3" style={{ marginRight:50+'px' }}>
       <div className="card-body ">
               <strong> 
                  <small className="">Order Statistics</small>

@@ -30,7 +30,7 @@ const Hero = () => {
             <div className="col-md-6 text-md-left text-center">
               <h1 className="text-muted display-6">We Offer The Best <span className="text-primary">Market </span>Experience</h1>
               <p className="text-muted">
-    At Flowbonds, we are dedicated to providing a seamless and efficient marketplace experience. Our platform connects sellers, buyers, and drivers, ensuring that you have access to a wide range of products and services. Whether you are looking to buy, sell, deliver, or render services, Flowbonds is your go-to solution for all your marketplace needs.
+    At Flowbonds, we are dedicated to providing a seamless and efficient marketplace experience. Our platform connects sellers and buyers, ensuring that you have access to a wide range of products and services. Whether you are looking to buy, sell, deliver, or render services, Flowbonds is your go-to solution for all your marketplace needs.
   </p>             <div className="d-flex justify-content-between mt-3">
              
               </div>

@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="col-md-3">
         <h5 style={{ display: "block", textAlign: "justify" }}>Flowbonds</h5>
         <p className="text-muted" style={{ textAlign: "justify" }}>
-          Best Marketplace connecting Sellers, Buyers and Drivers with no effort seamlessly
+          Best Marketplace connecting Sellers and Buyers of all Kind with no effort seamlessly
         </p>
         <div style={{ display: "block", textAlign: "justify" }}>
           <a href="#" className="text-muted me-3">

@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import'./../../assets/css/seller.css'
-
+import { useSelector } from 'react-redux';
 import RecentIvoice from '../../components/seller/recentInvoice';
 import { useUserContext } from '../../contextProvider/userContext';
 
 const Order = () => {
+   const value = useSelector((state) => state.global.value);
+      
     // give page title
     useEffect(() => {
         document.title = "Seller Order"
@@ -14,8 +16,8 @@ const Order = () => {
 return(
   <>
    <div className=" row mt-5"      style={{
-        marginLeft: '', // Sidebar width
-        width: 'calc(100% - 250px)', // Full width minus sidebar
+        marginLeft: value?'250px' : '10px', // Sidebar width
+        width: value? 'calc(100% - 250px)':'99.1%', // Full width minus sidebar
         height: '70px', // Header height
         position: 'absolute', // Keeps the header at the top
         top: 0,
@@ -36,21 +38,21 @@ return(
  
     </div>
       
-     <div className="dashboard m-5 mt-5">
+     <div className={`dashboard my-5  ${value?'ml-260':'mx-100'}`}>
      
 
 <div className="row pt-5  mt-5">
   
-    <div className="col-md-8 mt-4 order-nav bg-light border-dark mx-auto p-3 " style={{ border:'solid 1px #222', borderRadius:'2em' }}>
-        <Link className="btn btn-md me-5" style={{ border:'solid 1px #222' }}>All order</Link>
-        <Link className='me-5 text-dark' style={{ textDecoration:'none' }}>Drafts</Link>
-        <Link className='me-5 text-dark' style={{ textDecoration:'none' }}>Shipping</Link>
-        <Link className='me-5 text-dark' style={{ textDecoration:'none' }}>Complete</Link>
-        <Link className='me-5 text-dark' style={{ textDecoration:'none' }}>Cancelled</Link>
+    <div className="col-md-8 mt-4 mx-auto order-nav bg-light border-dark mx-auto p-3 " style={{ border:'solid 1px #222', borderRadius:'2em' }}>
+        <Link className="btn btn-md me-lg-3" style={{ border:'solid 1px #222' }}>All order</Link>
+        <Link className='me-lg-3 text-dark btn' style={{ textDecoration:'none' }}>Drafts</Link>
+        <Link className='me-lg-3 text-dark btn' style={{ textDecoration:'none' }}>Shipping</Link>
+        <Link className='me-lg-3 text-dark btn' style={{ textDecoration:'none' }}>Complete</Link>
+        <Link className='me-lg-3 text-dark btn' style={{ textDecoration:'none' }}>Cancelled</Link>
     </div>
 </div>
 
-<div className='row mt-4'>
+<div className='row mt-4 pl-5'>
 
 <RecentIvoice/>
 </div>

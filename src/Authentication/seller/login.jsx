@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
 
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
-
+    const navigate =useNavigate();
     const getData = (e) => {
         const datas = {
             ...user,
@@ -22,10 +22,15 @@ const Login = () => {
             return;
         }
 setError('');
+if(user.pwd.length < 8)
+{
+    return setError('minimum password is 8 character')
+   
+}
 
-console.log(user);
 
         alert("Login Successful")
+        navigate('/seller/dashboard');
 
     }
   

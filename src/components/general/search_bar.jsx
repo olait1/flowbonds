@@ -5,7 +5,7 @@ const SearchBar = ({placeholder }) => {
   return (
 
     <div
-    className="input-group mx-3"
+    className="input-group mx-3 search-bar"
     style={{ maxWidth: '300px', flexGrow: 1 }}
   >
     <span className="input-group-text bg-white border-end-0">

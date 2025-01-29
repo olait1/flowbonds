@@ -67,7 +67,7 @@ const SalesAnalytic = () => {
   }, []); // Runs only on mount and unmount
 
   return (
-    <div className="col-8 ml-6 card bg-light shadow p-3" style={{ }}>
+    <div className="col-md-8 sa ml-6 card bg-light shadow p-3" style={{ }}>
       <div className="card-body ">
         <strong>
           <small>Sales Analytics</small>

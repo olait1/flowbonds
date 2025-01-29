@@ -7,7 +7,7 @@ import illustrationImg from "./../../assets/img/illustrationimg.png"
 import logoImg from "./../../assets/img/logoimg.png"
 import social_graphicImg from "./../../assets/img/social_graphic1.png"
 import video_EditingImg from "./../../assets/img/video_Editing.png"
-import ecommerce from "./../../assets/img/e1.jpeg"
+import ecommerce from "./../../assets/img/e2.jpeg"
 const products =[
     {
 name:'Shopping Store',

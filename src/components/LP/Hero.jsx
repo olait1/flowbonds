@@ -19,13 +19,13 @@ const Hero = () => {
             <Navbar/>
 
             <div className="row mt-5 "  id="hero">
-        <div className="col-md-10 text-dark container ">
+        <div className="col-10 text-dark container ">
           <div className="row">
             <div className="col-md-9">
 
            
           <h1 className="display-5 fw-bold mt-lg-5 " style={{ textAlign : "justify" }}>
-          Seamlessly Connecting Seller and Buyers of all Kind...   </h1>
+          Seamlessly Connecting Sellers and Buyers of all Kind...   </h1>
           <p className="lead text-justify  mt-lg-5 text-dark" style={{ textAlign : "justify", fontWeight:'bolder'}}>
           Join Flowbonds today to experience Seamless Solutions, Infinite Possibilities in an ever-evolving digital world...
        
@@ -37,7 +37,7 @@ const Hero = () => {
           </div>
           </div>
         </div>
-        <div className="col-md-4 text-center" >
+        <div className="col-md- text-center" >
         
         </div>
         </div>

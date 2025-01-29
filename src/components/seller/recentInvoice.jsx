@@ -26,7 +26,7 @@ setCheckPage(false);
       </strong> }
       
      
-{ checkPage ? '' :<div className="row mt-3">
+{ checkPage ? '' :<div className="row mt-3 ">
   <div className="col-md-12 ">
     <div className="d-flex justify-content-between  align-items-center">
       <SearchBar placeholder='search...' />
@@ -68,16 +68,16 @@ setCheckPage(false);
               <th>Price</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody >
             <tr>
               <td>1</td>
               <td>#3454464</td>
               <td>
-  <span className='p-1 mr-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
+  <span className='p-1 mr-lg-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
   Eren Yeager
 </td>
 <td>
-  <span className='p-1 mr-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
+  <span className='p-1 mr-lg-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
   Noodles
 </td>
 <td>21/07/2024</td>
@@ -93,15 +93,15 @@ setCheckPage(false);
               <td>2</td>
               <td>#3454464</td>
               <td>
-  <span className='p-1 mr-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
+  <span className='p-1 mr-lg-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
   Eren Yeager
 </td>
 <td>
-  <span className='p-1 mr-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
+  <span className='p-1 mr-lg-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
   Noodles
 </td>
               <td>21/07/2024</td>
-              <td> <span className='rounded p-1 ' style={
+              <td> <span className='rounded p-lg-1 ' style={
                 { borderBlockStyle:'solid',
                 borderBlockColor:'#222', 
                 borderBlockWidth:1+'px' }
@@ -113,11 +113,11 @@ setCheckPage(false);
               <td>3</td>
               <td>#3454464</td>
               <td>
-  <span className='p-1 mr-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
+  <span className='p-1 mr-lg-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
   Eren Yeager
 </td>
 <td>
-  <span className='p-1 mr-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
+  <span className='p-1 mr-lg-2' style={{ backgroundColor:'#ccc', borderRadius: '50%', width: '20px', height: '20px', display: 'inline-block', marginRight: '10px' }}>&nbsp;</span>
   Noodles
 </td>
               <td>21/07/2024</td>

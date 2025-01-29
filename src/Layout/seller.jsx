@@ -1,26 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../components/general/sidebar';
 import Header from '../components/general/header';
-
 import './../assets/css/seller.css';
 import { Outlet } from 'react-router-dom';
-import { use } from 'react';
+import {  useSelector } from 'react-redux';
+
 const Seller = () => {
+   const value = useSelector((state) => state.global.value);
 
   
   return (
  
-    <div class="container-fluid">
-    <div class="row">
+    <div className="container-fluid">
+    <div className="row">
       {/* Sidebar */}
-      <div class="col-md-3 sidebar bg-light">
+     
+      <div className={`${value ? 'col-md-3' : 'd-none'} sidebar bg-light`}>
         {/* Sidebar content  */}
         <Sidebar/>
       </div>
        {/* Main content */}
-      <div class="col-md-9 p-0">
+      <div className={`${!value ? 'col-md-12' : ' col-md-9'} p-0`}>
         <Header/>
-        <div class="dashboard p-0">
+        <div className="dashboard p-0">
           {/*  Dashboard content */}
         <Outlet/>
         </div>
