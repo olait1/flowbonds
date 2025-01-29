@@ -3,7 +3,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const globalSlice = createSlice({
   name: "global",
-  initialState: { value: false },
+  initialState: { value: true },
   reducers: {
     setValue: (state, action) => {
       state.value = action.payload;
