@@ -1,7 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  
+  const [user, setUser] = useState({});
+  const [error, setError] = useState('');
+  const navigate =useNavigate();
+  const getData = (e) => {
+    const datas = {
+        ...user,
+        [e.target.name]: e.target.value
+    };
+
+    setUser(datas);
+};
+
+
+const payload = (e) => {
+  e.preventDefault();
+  // if (!user.email || !user.pwd || !user.cpwd) {
+  //     setError("All fields are required");
+  //     return;
+  // }
+  alert("Login Successful")
+
+
+}
+
+
     return <>
    <form className="p-3">
                     <p className="text-center h5 fw-bold mx-1 ">
@@ -21,18 +47,18 @@ const SignUp = () => {
                   </div>
   <div class="mb-3 mt-5">
     <label for="exampleInputEmail1" className="form-label">Email address</label>
-    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+    <input type="email" name="name"  onChange={getData} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" className="form-label">Password</label>
-    <input type="password" className="form-control" id="exampleInputPassword1"/>
+    <input type="password" name="pwd" onChange={getData} className="form-control" id="exampleInputPassword1"/>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" className="form-label">Confirm Password</label>
-    <input type="password" className="form-control" id="exampleInputPassword1"/>
+    <input type="password" name="cpwd" onChange={getData} className="form-control" id="exampleInputPassword1"/>
   </div>
 
-  <button type="submit" className="btn btn-block btn-dark w-100">Submit</button>
+  <button type="submit" className="btn btn-block btn-dark w-100" onClick={payload}>Submit</button>
   <p className="text-center mt-3">
  Already have an account? <Link to="/auth/seller" className="text-dark" style={{ textDecoration:"none" }}>Login</Link>
   </p>

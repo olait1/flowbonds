@@ -1,25 +1,48 @@
-import React from "react";
-import heroImg from "./../../assets/img/heroImg.png"; // Ensure this path is correct
-import Navbar from "./Navbar"
+import React, { useRef, useEffect } from "react";
+import heroImg from "./../../assets/img/heroImg.png";
+import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import "./../../assets/css/lp_hero.css";
+import { motion } from "framer-motion";
+import { ParticlesBackground } from "../particules/particules";
+
 const Hero = () => {
+  const heroRef = useRef(null);
+  const particlesRef = useRef(null);
+  const drops = Array.from({ length: 10 });
+
+  useEffect(() => {
+    const resizeHandler = () => {
+      if (heroRef.current && particlesRef.current) {
+        particlesRef.current.style.height = `${heroRef.current.offsetHeight}px`;
+      }
+    };
+    window.addEventListener("resize", resizeHandler);
+    resizeHandler(); // Call it initially to set the height
+    return () => window.removeEventListener("resize", resizeHandler);
+  }, []);
+
   return (
-    <div className="" id="hero-bg" >
-  {/* <div class="wave-clip">
-  <h1>In and Out Curve</h1>
-</div> */}
+    <div className="position-relative drop-container" id="hero-bg" ref={heroRef} >
+       
+       <div
+        className="particles-container      "
+        ref={particlesRef}
+        style={{ position: "absolute", top: 0, left: 0, width: "100%", zIndex: 1 }} // z-index is important
+      >
+          <ParticlesBackground /> {/* Render the ParticlesBackground component here */}
+      
+     </div>
+      
+      <div className="row container-fluid py-5 text-white" id="home">
+        <div className="col-md-12">
+          <Navbar />
 
-
-
-      {/* Hero Section */}
-      <div className="row container-fluid py-5  text-white  " id="home" >
-        <div className="col-md-12 ">
- 
-
-            <Navbar/>
-
-            <div className="row mt-5 "  id="hero">
-        <div className="col-10 text-dark container ">
+          <div className="row mt-5" id="hero">
+            {/* ... (Your hero content) ... */}
+         
+         
+            <div className="col-10 text-dark container ">
           <div className="row">
             <div className="col-md-9">
 
@@ -40,13 +63,12 @@ const Hero = () => {
         <div className="col-md- text-center" >
         
         </div>
-        </div>
+          </div>
         </div>
       </div>
 
-      
+     
     </div>
-    
   );
 };
 

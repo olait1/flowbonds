@@ -2,6 +2,10 @@ import React from "react";
 import logoIcon from "./../../assets/img/logo.png"
 import graphicIcon from "./../../assets/img/graphic.png"
 import seoIcon from "./../../assets/img/seo.png"
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 const service_product = [
     {
          icon:logoIcon,
@@ -22,6 +26,91 @@ const service_product = [
     amount: 500
 }
 ]
+
+
+
+// Custom Next Arrow Component
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  
+  return (
+    <button 
+      className={className + ' btn'}
+      style={{ 
+        ...style, 
+        display: "block", 
+        backgroundColor: "#055c9d", 
+        borderRadius: "50%",
+        color:'#fff',
+        width: "40px", 
+        height: "40px",
+        border: "none",
+        outline: "none",
+        zIndex: 1,
+      }}
+      onClick={onClick}
+    >
+      &rarr;
+    </button>
+  );
+}
+
+// Custom Previous Arrow Component
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <button 
+      className={className + ' btn'}
+      style={{ 
+        ...style, 
+        display: "block", 
+        backgroundColor: "#ffffff", 
+        color: "#000",
+        borderRadius: "50%", 
+        width: "40px", 
+        height: "40px",
+        border: "none",
+        outline: "none",
+        zIndex: 1,
+      }}
+      onClick={onClick}
+    >
+      &larr;
+    </button>
+  );
+}
+
+
+
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3, // Show 3 slides at a time
+  slidesToScroll: 1, // Scroll 1 slide at a time
+  autoplay: true,
+  autoplaySpeed: 3000,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  responsive: [ // Add responsiveness for smaller screens
+    {
+      breakpoint: 768, // Adjust breakpoint as needed
+      settings: {
+        slidesToShow: 1, // Show 1 slide on smaller screens
+      },
+    },
+    {
+      breakpoint: 1024, // Adjust breakpoint as needed
+      settings: {
+        slidesToShow: 2, // Show 2 slides on medium screens
+      },
+    },
+  ],
+};
+
+
+
 const Services = () => {
   return (
 
@@ -41,8 +130,9 @@ const Services = () => {
   {/* Right Section */}
   <div className="d-flex align-items-center">
     {/* Left Arrow */}
-    <span
-      className="h4 d-flex justify-content-center align-items-center"
+    {/* {settings.prevArrow} */}
+    {/* <button
+      className="h4 btn d-flex justify-content-center align-items-center"
       style={{
         width: "40px",
         height: "40px",
@@ -54,11 +144,11 @@ const Services = () => {
       }}
     >
       &larr;
-    </span>
-
+    </button> */}
+{/* {settings.nextArrow} */}
     {/* Right Arrow */}
-    <span
-      className="h4 d-flex justify-content-center align-items-center text-light"
+    {/* <button
+      className="h4 btn d-flex justify-content-center align-items-center text-light"
       style={{
         width: "40px",
         height: "40px",
@@ -68,7 +158,10 @@ const Services = () => {
       }}
     >
       &rarr;
-    </span>
+    
+    </button> */}
+    {/* <button type="button" data-role="none" className="btn btn-danger slick-arrow slick-prev" style={{display: 'block'  }}> Previous</button>
+  */}
   </div>
 </div>
 
@@ -76,13 +169,18 @@ const Services = () => {
         </div>
       </div>
       <div className="row">
-        {service_product.map((service, index) => (
-          <div className="col-md-4 mb-4" key={index}>
+      
+<div className="container">
+<div className="slideshow">
+      <Slider {...settings}>
+   {service_product.map((service,id) => (
+          
+              <div className="col-md-4 mb-4 mx-5" key={id}>
           <div className="card text-center shadow-sm same-height-card">
             <div className="card-body">
-             
-                <img src={service.icon} alt="" style={{ height: "100px", marginRight: "10px" }} />
-                <h5 className="card-title d-flex align-items-center justify-content-center">
+            
+            <img src={service.icon} alt={service.icon} className="mx-auto" style={{ height: "100px", marginRight: "10px" }} />
+               <h5 className="card-title d-flex align-items-center justify-content-center">
                   <span>{service.title}</span>
               </h5>
               <p className="card-text text-muted">{service.description}</p>
@@ -93,12 +191,15 @@ const Services = () => {
                 <a href="#" className="text-primary">
                   Apply Now
                 </a>
-              </div>
+          </div>
+          </div>
             </div>
           </div>
-        </div>
         
         ))}
+      </Slider>
+    </div>
+    </div>
       </div>
     </div>
   </section>
