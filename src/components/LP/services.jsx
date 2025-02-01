@@ -175,7 +175,7 @@ const Services = () => {
       <Slider {...settings}>
    {service_product.map((service,id) => (
           
-              <div className="col-md-4 mb-4 mx-5" key={id}>
+              <div className="col-md-4 mb-4 mx-5 container" key={id}>
           <div className="card text-center shadow-sm same-height-card">
             <div className="card-body">
             
