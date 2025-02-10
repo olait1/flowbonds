@@ -172,33 +172,35 @@ const Services = () => {
       
 <div className="container">
 <div className="slideshow">
-      <Slider {...settings}>
-   {service_product.map((service,id) => (
-          
-              <div className="col-md-4 mb-4 mx-5 container" key={id}>
-          <div className="card text-center shadow-sm same-height-card">
-            <div className="card-body">
-            
-            <img src={service.icon} alt={service.icon} className="mx-auto" style={{ height: "100px", marginRight: "10px" }} />
-               <h5 className="card-title d-flex align-items-center justify-content-center">
-                  <span>{service.title}</span>
-              </h5>
-              <p className="card-text text-muted">{service.description}</p>
-              <div className="d-flex justify-content-between align-items-center">
-                <span className="text-muted">
-                  Highest bid: <br />$ {service.amount}
-                </span>
-                <a href="#" className="text-primary">
-                  Apply Now
-                </a>
+<Slider {...settings}>
+  {service_product.map((service, id) => (
+    <div key={id} className="px-2">
+      <div className="card text-center shadow-sm same-height-card d-flex flex-column h-100">
+        <div className="card-body d-flex flex-column">
+          <img 
+            src={service.icon} 
+            alt={service.icon} 
+            className="mx-auto" 
+            style={{ height: "100px", marginBottom: "10px" }} 
+          />
+          <h5 className="card-title d-flex align-items-center justify-content-center">
+            <span>{service.title}</span>
+          </h5>
+          <p className="card-text text-muted flex-grow-1">{service.description}</p>
+          <div className="d-flex justify-content-between align-items-center">
+            <span className="text-muted">
+              Highest bid: <br />$ {service.amount}
+            </span>
+            <a href="#" className="text-primary">
+              Apply Now
+            </a>
           </div>
-          </div>
-            </div>
-          </div>
-        
-        ))}
-      </Slider>
+        </div>
+      </div>
     </div>
+  ))}
+</Slider>
+  </div>
     </div>
       </div>
     </div>

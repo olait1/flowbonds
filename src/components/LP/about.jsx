@@ -18,7 +18,7 @@ const Hero = () => {
                 
                  <div>
                   <h4>500+</h4>
-                  <p>Sellers, Buyers & Drivers</p>
+                  <p>Sellers & Buyers</p>
                 </div>
                 <div>
                   <h4>300+</h4>

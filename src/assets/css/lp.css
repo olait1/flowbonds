@@ -253,6 +253,19 @@ width: 100%;
   display: none !important;
   opacity: 1 !important;
 }
+.same-height-card {
+  height: 100%; /* Make sure the card fills the height */
+  display: flex;
+  flex-direction: column;
+}
+
+.same-height-card .card-body {
+  flex-grow: 1; /* Makes content stretch evenly */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
 /* ... other styles ... */
 
