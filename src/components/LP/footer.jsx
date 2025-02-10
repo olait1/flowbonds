@@ -8,7 +8,7 @@ const Footer = () => {
   <div className="container">
     <div className="row">
       {/* Flowbonds Section */}
-      <div className="col-md-4">
+      <div className="col-md-3">
         <h5 style={{ display: "block", textAlign: "justify" }}>Flowbonds</h5>
         <p className="text-muted" style={{ textAlign: "justify" }}>
           Best Marketplace connecting Sellers and Buyers of all Kind with no effort seamlessly
@@ -27,18 +27,28 @@ const Footer = () => {
       </div>
 
       {/* Sellers & Buyers Section */}
-      <div className="col-md-4">
-        <h5 style={{ display: "block", textAlign: "justify" }}>Sellers & Buyers</h5>
+      <div className="col-md-3">
+        <h5 style={{ display: "block", textAlign: "justify" }}>Sellers</h5>
         <ul className="list-unstyled text-muted" style={{ textAlign: "justify" }}>
-          <li><a href="#" className="text-muted">Find Favourites</a></li>
+          <li><a href="#" className="text-muted">Create Account</a></li>
           <li><a href="#" className="text-muted">Post Favourites</a></li>
           <li><a href="#" className="text-muted">Refund Policy</a></li>
           <li><a href="#" className="text-muted">Privacy Policy</a></li>
         </ul>
       </div>
 
+      {/* Buyers Section */}
+      <div className="col-md-3">
+        <h5 style={{ display: "block", textAlign: "justify" }}>Buyers</h5>
+        <ul className="list-unstyled text-muted" style={{ textAlign: "justify" }}>
+        <li><a href="#" className="text-muted">Create Account</a></li>
+          <li><a href="#" className="text-muted">Find Favourite</a></li>
+          <li><a href="#" className="text-muted">Privacy Policy</a></li>
+        </ul>
+      </div>
+
       {/* Contact Section */}
-      <div className="col-md-4">
+      <div className="col-md-3">
         <h5 style={{ display: "block", textAlign: "justify" }}>Call Us</h5>
         <ul className="list-unstyled text-muted" style={{ textAlign: "justify" }}>
           <li><i className="fa fa-map-marker-alt fa-sm"></i> Nigeria</li>
